@@ -1,0 +1,29 @@
+﻿ @{
+    ViewData["Title"] = "Login Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Login Page</h1>
+</div> 
+
+@model WebApplication2.Models.Login
+
+<form asp-action="Index" asp-controller="Home" method="post">
+    <div class="display-1">
+    <div>
+        <label class="Email">Email: </label>
+        <input class="Email" asp-for="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <br />
+    <br />
+    <div>
+        <label class="Password">Password: </label>
+        <input class="Password" asp-for="Password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <br />
+    <br />
+    <button type="submit" class="btn-primary">Login</button>
+    </div>
+</form>
